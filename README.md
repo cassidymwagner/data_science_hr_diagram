@@ -5,3 +5,5 @@ Demo for Hacker Within to explore the application of data science to astronomica
 Focus:
 * Hertzsprung-Russell Diagram
 * Stellar Evolution
+
+HYG dataset: http://www.astronexus.com/hyg
