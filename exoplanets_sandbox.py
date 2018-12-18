@@ -3,12 +3,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-df = pd.read_csv('planets_new.csv', index_col=0)
+df = pd.read_csv('planets_new.csv')
 def add_columns(column_list):
-    df_new = pd.read_csv('planets_new.csv', index_col=0)
+    df_new = pd.read_csv('planets_new.csv')
+    df_complete = pd.read_csv('planets_complete.csv', header=146)
     df_new.join(df_complete[column_list]).to_csv('planets_new.csv')
 # add_columns(['st_glon', 'st_glat'])
 add_columns(['st_elon', 'st_elat'])
+add_columns(['st_lum'])
 
 
 # galactic plane
@@ -44,3 +46,7 @@ def compare(variable, kind):
 compare('pl_radj', 'kde')
 compare('pl_orbsmax', 'kde')
 compare('st_optmag', 'kde')
+
+# exoplanet HR
+df['st_log_teff'] = np.log10(df.st_teff)
+df.plot.scatter('st_log_teff', 'st_lum', s=1)
