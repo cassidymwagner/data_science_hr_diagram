@@ -7,3 +7,8 @@ Focus:
 * Stellar Evolution
 
 HYG dataset: http://www.astronexus.com/hyg
+
+## UPDATE: Added 2 other datasets to run workshop through EJP. 
+
+NGC 4636 dataset: *need link*
+Exoplanets dataset: *need link*
